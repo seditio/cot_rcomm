@@ -29,8 +29,7 @@ if ($cfg['jquery'] && $cfg['plugin']['rcomm']['ajax_send']) {
   }
 }
 
-$sql = Cot::$db->query("SELECT * FROM $db_com WHERE com_area = ? AND com_code = ?  ORDER BY $comments_order ",
-array($ext_name, $code));
+$sql = Cot::$db->query("SELECT * FROM $db_com WHERE com_area = ? AND com_code = ?  ORDER BY $comments_order ", array($ext_name, $code));
 $total_comm = $sql->rowCount();
 $i = 0;
 foreach ($sql->fetchAll() as $row) {
